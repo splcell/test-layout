@@ -1,0 +1,111 @@
+.calculator
+    padding: 213px 0
+
+    &__title
+        max-width: 753px
+        margin-bottom: 32px
+
+    &__form, &__form-box
+        display: flex
+        flex-direction: column
+
+    &__form-inner
+        display: flex
+        justify-content: space-between
+        margin-bottom: 44px
+
+    &__form-label, &__form-descr
+        @extend %second-font
+        font-size: 16px
+        line-height: 20px
+        margin-bottom: 24px
+        color: $grey-color
+
+    &__form-box
+        position: relative
+
+    &__form-input
+        width: 427px
+        background: #F3F3F4
+        border-radius: 16px
+        padding: 16px 24px
+        border: none
+        @extend %main-font
+        font-size: 30px
+        line-height: 36px
+        color: $grey-color
+
+    &__form-currency, &__form-percent, &__form-months
+        position: absolute
+
+    &__form-currency
+        @extend %main-font
+        font-size: 30px
+        line-height: 36px
+        color: $grey-color
+        top: 55px
+        right: 24px
+
+    &__form-slider
+        position: absolute
+        bottom: 0
+        left: 24px
+
+
+    &__form-percent
+        background: #EBEBEC
+        border-radius: 16px
+        @extend %main-font
+        font-size: 20px
+        line-height: 120%
+        color: $grey-color
+        padding: 15px 17px
+        top: 50px
+        right: 10px
+
+    &__form-months
+        @extend %main-font
+        font-size: 30px
+        line-height: 36px
+        color: $grey-color
+        top: 57px
+        right: 10px
+
+    &__form-result
+        display: flex
+        align-items: center
+
+    &__result-sum
+        margin-right: 228px
+
+    &__form-descr
+        margin-bottom: 8px
+
+    &__form-sum, &__form-payment
+        @extend %main-font
+        font-size: 54px
+        line-height: 90%
+        color: #333333
+
+    &__result-payment
+        margin-right: 271px
+
+    &__form-btn
+        padding: 14px 92.5px 18px 92.5px
+
+.noUi-handle
+    width: 20px !important
+    height: 20px !important
+    background: $yellow-color
+    border-radius: 100%
+    border: none
+    cursor: pointer
+    top: -9px !important
+    box-shadow: none
+    &::before, &::after
+        display: none
+
+.noUi-horizontal
+    width: 311px
+    height: 2px
+    border: 1px solid $yellow-color !important
