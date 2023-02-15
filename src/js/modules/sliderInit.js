@@ -4,10 +4,6 @@ const sliderInit = (sliderItem, valueItem, start, min, max) => {
 
     let priceStart = start;
 
-    console.log(start.toLocaleString());
-    
-
-
     noUiSlider.create(sliderItem, {
         start: [priceStart],
         range: {
@@ -20,7 +16,7 @@ const sliderInit = (sliderItem, valueItem, start, min, max) => {
         format: {
             // 'to' the formatted value. Receives a number.
             to: function (value) {
-                return Math.round(value).toLocaleString();
+                return Math.round(value);
             },
             // 'from' the formatted value.
             // Receives a string, should return a number.
@@ -29,12 +25,19 @@ const sliderInit = (sliderItem, valueItem, start, min, max) => {
             }
         },
 
-        ariaFormat: valueItem.value
         
     });
 
     sliderItem.noUiSlider.on('update', function (values, handle) {
-        valueItem.value = values[handle];
+            valueItem.value = values[handle];
+            //valueItem.setAttribute('data-value', values[handle]);
+
+    });
+
+    valueItem.addEventListener('change', function(){
+        this.value = this.value;
+        sliderItem.noUiSlider.set([+this.value]);
+
     });
 
 };

@@ -19,19 +19,19 @@
                     <div class="calculator__form-inner">
                         <div class="calculator__form-box">
                             <label for="price" class="calculator__form-label">Стоимость автомобиля</label>
-                            <input type="text" class="calculator__form-input" id="price" data-start="3300000">
+                            <input type="text" class="calculator__form-input" id="price" data-start="3300000" data-min="1500000" data-max="10000000">
                             <span class="calculator__form-currency">₽</span>
                             <div class="calculator__form-slider" id="priceSlider"></div>
                         </div>
                         <div class="calculator__form-box">
                             <label for="payment" class="calculator__form-label">Первоначальный взнос</label>
-                            <input type="text" class="calculator__form-input" id="payment">
-                            <span class="calculator__form-percent">13%</span>
+                            <input type="text" class="calculator__form-input" id="payment" data-start="420000" data-min="150000" data-max="6000000">
+                            <span class="calculator__form-percent"></span>
                             <div class="calculator__form-slider" id="paymentSlider"></div>
                         </div>
                         <div class="calculator__form-box">
                             <label for="leasing" class="calculator__form-label">Срок лизинга</label>
-                            <input type="text" class="calculator__form-input" id="leasing" data-start="60">
+                            <input type="text" class="calculator__form-input" id="leasing" data-start="60" data-min="6" data-max="120">
                             <span class="calculator__form-months">мес.</span>
                             <div class="calculator__form-slider" id="leasingSlider"></div>
                         </div>
@@ -39,11 +39,11 @@
                     <div class="calculator__form-result">
                         <div class="calculator__result-sum">
                             <p class="calculator__form-descr">Сумма договора лизинга</p>
-                            <span class="calculator__form-sum">4 467 313</span>
+                            <span class="calculator__form-sum"></span>
                         </div>
                         <div class="calculator__result-payment">
                             <p class="calculator__form-descr">Ежемесячный платеж от</p>
-                            <span class="calculator__form-payment">114 455</span>
+                            <span class="calculator__form-payment"></span>
                         </div>
                         <button class="calculator__form-btn btn" type="submit">Оставить заявку</button>
                     </div>
