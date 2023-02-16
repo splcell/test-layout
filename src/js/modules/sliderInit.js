@@ -1,4 +1,5 @@
 import noUiSlider from 'nouislider';
+import wNumb from 'wnumb';
 
 const sliderInit = (sliderItem, valueItem, start, min, max) => {
 
@@ -16,14 +17,20 @@ const sliderInit = (sliderItem, valueItem, start, min, max) => {
         format: {
             // 'to' the formatted value. Receives a number.
             to: function (value) {
-                return Math.round(value);
+                return Number(Math.round(value));
+                
             },
             // 'from' the formatted value.
             // Receives a string, should return a number.
             from: function (value) {
-                return Number(value);
+                return value;
             }
         },
+
+        // format: wNumb({
+        //     decimals: 0,
+        //     thousand: ' ',
+        // })
 
         
     });

@@ -26,6 +26,7 @@
 
     &__form-input
         width: 427px
+        height: 68px
         background: #F3F3F4
         border-radius: 16px
         padding: 16px 24px
@@ -34,6 +35,10 @@
         font-size: 30px
         line-height: 36px
         color: $grey-color
+        outline-width: none
+        &:focus
+            background: #ffffff
+            border: 2px solid #F3F3F4
 
     &__form-currency, &__form-percent, &__form-months
         position: absolute
@@ -105,3 +110,31 @@
     width: 311px
     height: 2px
     border: 1px solid $yellow-color !important
+
+//адаптация
+@media(max-width:1313px)
+    .calculator
+        &__form-inner
+            justify-content: flex-start
+        &__form-input
+            width: 320px
+        &__form-percent
+            right: 40px
+        &__form-currency
+            right: 50px
+        &__form-months
+            right: 37px
+        &__form-input
+            margin-right: 32px
+        &__form-result
+            justify-content: flex-start
+        &__result-sum
+            margin-right: 73px
+        &__result-payment
+            margin-right: 123px
+        &__form-btn
+            padding: 14px 39.5px 18px
+    .noUi-horizontal
+        width: 204px
+    #leasing
+        margin-right: 0

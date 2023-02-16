@@ -17,7 +17,7 @@ const calculator = () =>{
    const formPayment = document.querySelector('.calculator__form-payment');
    const formBtn = document.querySelector('.calculator__form-btn');
 
-   
+
 
 
 
@@ -35,13 +35,13 @@ window.onload = function(){
    //вывод расчетов после загрузки страницы и скриптов
    percent.innerHTML = `${Math.round((payment.value / price.value) * 100)} %`;
    formPayment.innerHTML = `${Number(Math.round((price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1)))).toLocaleString()} ₽`;
-   formSum.innerHTML = `${Number(payment.value + leasing.value * (price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1)).toFixed()).toLocaleString()}`;
+   formSum.innerHTML = `${Number(payment.value + leasing.value * (price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1))).toLocaleString()}`;
    //вывод расчетов после изменения положения ползунков
    paymentSlider.noUiSlider.on('update', function(values, handle){
       payment.value = values[handle];
       percent.innerHTML = `${Math.round((payment.value / price.value) * 100)} %`;
       formPayment.innerHTML = `${Number(Math.round((price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1)))).toLocaleString()} ₽`;
-      formSum.innerHTML = `${Number(payment.value + leasing.value * (price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1)).toFixed()).toLocaleString()}`;
+      formSum.innerHTML = `${Number(payment.value + leasing.value * (price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1))).toLocaleString()}`;
    });
    priceSlider.noUiSlider.on('update', function(values, handle){
       price.value = values[handle];
@@ -55,7 +55,19 @@ window.onload = function(){
       formPayment.innerHTML = `${Number(Math.round((price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1)))).toLocaleString()} ₽`;
       formSum.innerHTML = `${Number(payment.value + leasing.value * (price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1))).toLocaleString()}`;
    });
+
+   // paymentSlider.noUiSlider.on('change', function(values, handle){
+   //    payment.value = values[handle];
+   //    percent.innerHTML = `${Math.round((payment.value / price.value) * 100)} %`;
+   //    let sumResult = Number(payment.value + leasing.value * (price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1))).toLocaleString();
+   //    let paymentResult = Number(Math.round((price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1)))).toLocaleString();
+
+   //    submit(form, formBtn, price, payment, leasing, sumResult, paymentResult);
+   // });
+
+   
 };
+
 
 
 price.addEventListener('input', function(){
@@ -78,7 +90,6 @@ leasing.addEventListener('input', function(){
    formSum.innerHTML = `${Number(payment.value + leasing.value * (price.value - payment.value) * (0.05 * Math.pow((1 + 0.05), leasing.value) / (Math.pow((1 + 0.05), leasing.value) - 1)).toFixed()).toLocaleString()}`;
 });
 
-submit(form, formBtn, price, payment, leasing, formSum, formPayment);
 
 
 
