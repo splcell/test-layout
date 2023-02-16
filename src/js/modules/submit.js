@@ -10,6 +10,7 @@ const submit = (formItem, btn, priceItem, paymentItem, leasingItem, priceForm, p
             };
 
             alert(JSON.stringify(objResult));
+            btn.classList.add('btn--disabled');
             btn.disabled = true;
    
 });

@@ -56,7 +56,6 @@
         bottom: 0
         left: 24px
 
-
     &__form-percent
         background: #EBEBEC
         border-radius: 16px
@@ -82,7 +81,6 @@
         justify-content: space-between
         align-items: end
 
-
     &__form-descr
         margin-bottom: 8px
 
@@ -102,15 +100,26 @@
     border-radius: 100%
     border: none
     cursor: pointer
-    top: -9px !important
+    top: -10px !important
     box-shadow: none
     &::before, &::after
         display: none
+    &--focus
+        width: 20px !important
+        height: 20px !important
 
 .noUi-horizontal
     width: 311px
     height: 2px
-    border: 1px solid $yellow-color !important
+    border: 2px solid $yellow-color !important
+    &:hover
+        border: 1px solid $yellow-color !important
+        .noUi-handle
+            width: 24px !important
+            height: 24px !important
+            top: -11px !important
+    &--focus
+        border: 1px solid $yellow-color !important
 
 //адаптация
 @media(max-width:1313px)
@@ -160,8 +169,6 @@
             right: 23px
         &__form-result
             flex-wrap: wrap
-        // &__result-sum, &__result-payment
-        //     margin-bottom: 44px
     .noUi-horizontal
         width: 90%
 
@@ -169,3 +176,32 @@
     .calculator
         &__result-sum, &__result-payment
             margin-bottom: 44px
+
+@media(max-width:705px)
+    .calculator
+        &__title
+            font-size: 44px
+        &__form-result
+            flex-wrap: nowrap
+            flex-direction: column
+            align-items: flex-start
+
+@media(max-width:365px)
+    .calculator
+        padding: 44px 0 64px 0
+        &__title
+            font-size: 34px
+        &__form-sum, &__form-payment, &__form-input, &__form-months, &__form-btn
+            font-size: 22px
+        &__form-currency
+            font-size: 20px
+            top: 58px
+            right: 34px
+        &__form-percent
+            padding: 14px
+            right: 8px
+            font-size: 22px
+        &__form-btn
+            padding: 18px 51px 22px 51px
+        &__form-descr, &__form-label
+            font-size: 14px
