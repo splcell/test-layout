@@ -90,6 +90,9 @@
         line-height: 90%
         color: #333333
 
+    &__result-payment
+        margin-left: -60px
+
     &__form-btn
         padding: 14px 92.5px 18px 92.5px
 
@@ -144,12 +147,14 @@
             margin-right: 123px
         &__form-btn
             padding: 14px 39.5px 18px
+        &__result-payment
+            margin-left: 0
     .noUi-horizontal
         width: 204px
     #leasing
         margin-right: 0
 
-@media(max-width:1040px)
+@media(max-width:1065px)
     .calculator
         padding: 64px 0 158px 0
         &__form-inner
@@ -169,13 +174,14 @@
             right: 23px
         &__form-result
             flex-wrap: wrap
+        &__result-sum, &__result-payment
+            margin-bottom: 44px
     .noUi-horizontal
         width: 90%
 
 @media(max-width:1024px)
     .calculator
-        &__result-sum, &__result-payment
-            margin-bottom: 44px
+        
 
 @media(max-width:705px)
     .calculator
