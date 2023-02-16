@@ -1,4 +1,4 @@
-const submit = (formItem, btn, priceItem, paymentItem, leasingItem, priceForm, paymentForm) => {
+const submit = (formItem, btn, priceItem, paymentItem, leasingItem, priceForm, paymentForm, percentItem) => {
     formItem.addEventListener('submit', function(e){
         e.preventDefault();
         const objResult = {
@@ -6,7 +6,8 @@ const submit = (formItem, btn, priceItem, paymentItem, leasingItem, priceForm, p
                 payment: paymentItem.value,
                 leasing: leasingItem.value,
                 priceResult: priceForm,
-                paymentResult: paymentForm
+                paymentResult: paymentForm,
+                percent: percentItem
             };
 
             alert(JSON.stringify(objResult));

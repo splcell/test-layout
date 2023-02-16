@@ -4,8 +4,6 @@ const sliderStyling = () =>{
     const handles = document.querySelectorAll('.noUi-handle');
 
     inputs.forEach((item, i) =>{
-        console.log(item, i);
-        console.log(horizontals[i], handles[i]);
         item.addEventListener('click', function(){
             if(item !== i){
             horizontals[i].classList.add('noUi-horizontal--focus');

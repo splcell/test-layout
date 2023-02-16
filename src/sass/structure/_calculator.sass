@@ -172,7 +172,7 @@
     .noUi-horizontal
         width: 90%
 
-@media(max-width:1020px)
+@media(max-width:1024px)
     .calculator
         &__result-sum, &__result-payment
             margin-bottom: 44px
@@ -186,7 +186,7 @@
             flex-direction: column
             align-items: flex-start
 
-@media(max-width:365px)
+@media(max-width:475px)
     .calculator
         padding: 44px 0 64px 0
         &__title
@@ -205,3 +205,11 @@
             padding: 18px 51px 22px 51px
         &__form-descr, &__form-label
             font-size: 14px
+    .noUi-horizontal
+        height: 2px
+        &:hover
+        border: 1px solid $yellow-color !important
+        .noUi-handle
+            width: 24px !important
+            height: 24px !important
+            top: -11px !important
